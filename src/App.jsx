@@ -1,32 +1,18 @@
 import "./App.css";
+import Cart from "./components/Cart";
+import Details from "./components/Details";
+
 import { Container, Flex, VStack, Text } from "@chakra-ui/react";
 
 function App() {
   return (
     <Container maxW="container.xl" padding={0} className="inspect">
+      {/* main container */}
       <Flex h="100vh" py={20}>
-        <VStack
-          w="full"
-          h="full"
-          alignItems="flex-start"
-          p={10}
-          spacing={10}
-          background={"red.300"}
-        >
-          <Text>hoi</Text>
-          <Text>hoi</Text>
-        </VStack>
-        <VStack
-          w="full"
-          h="full"
-          alignItems="flex-start"
-          p={10}
-          spacing={10}
-          background="gray.100"
-        >
-          <Text>hoi</Text>
-          <Text>hoi</Text>
-        </VStack>
+        {/* left/upper stack */}
+        <Details />
+        {/* right/bottom stack */}
+        <Cart />
       </Flex>
     </Container>
   );
