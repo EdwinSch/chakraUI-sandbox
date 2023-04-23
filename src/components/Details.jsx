@@ -10,9 +10,13 @@ import {
   Select,
   Checkbox,
   Button,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 
 const Details = () => {
+  // Set breakpoint values for inputs
+  const colspan = useBreakpointValue({ base: 2, md: 1 });
+
   return (
     <VStack w="full" h="full" alignItems="flex-start" p={10} spacing={10}>
       {/* heading element with sub-text */}
@@ -24,14 +28,14 @@ const Details = () => {
       {/* Form */}
       <SimpleGrid columns={2} columnGap={3} rowGap={6} w="full">
         {/* Input 1 */}
-        <GridItem colSpan={1}>
+        <GridItem colSpan={colspan}>
           <FormControl>
             <FormLabel>First Name</FormLabel>
             <Input placeholder="John"></Input>
           </FormControl>
         </GridItem>
         {/* Input 2 */}
-        <GridItem colSpan={1}>
+        <GridItem colSpan={colspan}>
           <FormControl>
             <FormLabel>Last Name</FormLabel>
             <Input placeholder="Doe"></Input>
@@ -45,14 +49,14 @@ const Details = () => {
           </FormControl>
         </GridItem>
         {/* Input 4 */}
-        <GridItem colSpan={1}>
+        <GridItem colSpan={colspan}>
           <FormControl>
             <FormLabel>City</FormLabel>
             <Input placeholder="New Somewhere"></Input>
           </FormControl>
         </GridItem>
         {/* Input 5 */}
-        <GridItem colSpan={1}>
+        <GridItem colSpan={colspan}>
           <FormControl>
             <FormLabel>Country</FormLabel>
             <Select>

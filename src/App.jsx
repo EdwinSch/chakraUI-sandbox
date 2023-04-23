@@ -6,9 +6,13 @@ import { Container, Flex, VStack, Text } from "@chakra-ui/react";
 
 function App() {
   return (
-    <Container maxW="container.xl" padding={0} className="inspect">
+    <Container maxW="container.xl" padding={0}>
       {/* main container */}
-      <Flex h="100vh" py={20}>
+      <Flex
+        h={{ base: "auto", md: "100vh" }}
+        py={[0, 10, 20]}
+        direction={{ base: "column-reverse", md: "row" }}
+      >
         {/* left/upper stack */}
         <Details />
         {/* right/bottom stack */}
