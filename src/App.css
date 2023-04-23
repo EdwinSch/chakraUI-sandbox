@@ -3,3 +3,6 @@
   margin: 0;
   box-sizing: border-box;
 }
+.inspect {
+  border: solid red 1px;
+}
