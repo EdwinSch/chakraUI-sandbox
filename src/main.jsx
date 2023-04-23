@@ -8,8 +8,24 @@ import {
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 
-// import custom theme extension
-// import theme from "./theme/index.jsx";
+const inputSelectStyles = {
+  variants: {
+    filled: {
+      field: {
+        _focus: {
+          borderColor: " brand.500",
+        },
+      },
+    },
+  },
+  sizes: {
+    md: {
+      field: {
+        borderRadius: "none",
+      },
+    },
+  },
+};
 
 const theme = extendTheme(
   {
@@ -30,6 +46,14 @@ const theme = extendTheme(
     fonts: {
       heading: "Montserrat",
       body: "Inter",
+    },
+    components: {
+      Input: {
+        ...inputSelectStyles,
+      },
+      Select: {
+        ...inputSelectStyles,
+      },
     },
   },
   withDefaultColorScheme({
