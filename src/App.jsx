@@ -2,7 +2,7 @@ import "./App.css";
 import Cart from "./components/Cart";
 import Details from "./components/Details";
 
-import { Container, Flex, VStack, Text } from "@chakra-ui/react";
+import { Container, Flex } from "@chakra-ui/react";
 
 function App() {
   return (
@@ -13,9 +13,9 @@ function App() {
         py={[0, 10, 20]}
         direction={{ base: "column-reverse", md: "row" }}
       >
-        {/* left/upper stack */}
+        {/* left || bottom Stack */}
         <Details />
-        {/* right/bottom stack */}
+        {/* right || upper Stack */}
         <Cart />
       </Flex>
     </Container>

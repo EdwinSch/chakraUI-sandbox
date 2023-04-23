@@ -8,6 +8,7 @@ import {
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 
+// customize input styles
 const inputSelectStyles = {
   variants: {
     filled: {
@@ -27,6 +28,7 @@ const inputSelectStyles = {
   },
 };
 
+// customize THEME
 const theme = extendTheme(
   {
     colors: {
@@ -47,15 +49,26 @@ const theme = extendTheme(
       heading: "Montserrat",
       body: "Inter",
     },
+    // customize default components
     components: {
+      Button: {
+        variants: {
+          primary: {
+            rounded: "none",
+          },
+        },
+      },
+      //spread from custom objects
       Input: {
         ...inputSelectStyles,
       },
+      //spread from custom objects
       Select: {
         ...inputSelectStyles,
       },
     },
   },
+  // use withDefault hooks
   withDefaultColorScheme({
     colorScheme: "brand",
     components: ["Checkbox"],
@@ -66,6 +79,7 @@ const theme = extendTheme(
   })
 );
 
+// ----APP----
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
